@@ -1,3 +1,9 @@
 <div class="container">
-    <app-form></app-form>
+    <div class="heading" (click)="open=!open">{{title}}
+        <img class="up-icon" [ngClass]="{ icon: open }" src="assets/icons/expand_more.svg">
+    </div>
+    <form [formGroup]="form" [ngClass]="{ showMe: open }" class="content collapsable">
+        <app-products class="grid" [products]="products" formControlName="product">
+        </app-products>
+    </form>
 </div>
