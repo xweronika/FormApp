@@ -1,5 +1,8 @@
-<ng-container *ngFor="let product of products">
-  <div class="card" (click)="selectProduct(product)" [ngClass]="getStyleForSelectedProduct(product)">
-    {{product.name}}
+<div *ngFor="let product of products" class="card" (click)="selectProduct(product)"
+  [ngClass]="classForSelectedProduct(product)">
+  <span class="title">{{product.name}}</span>
+  <div class="tooltip">
+    <img [ngClass]="classForSelectedProduct(product)" src="assets/icons/question.svg">
+    <span>{{product.description}}</span>
   </div>
-</ng-container>
+</div>

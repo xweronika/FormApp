@@ -1,15 +1,13 @@
-
 $grey: #828185;
 $light-grey: #e4e4e4;
 $white-smoke: #f8f4f4;
 
 .container {
-  margin: auto;
+  margin: 20px auto;
   width: 80%;
   padding: 10px;
 }
 
-// HEADING
 .heading {
   padding: 10px;
   display: flex;
@@ -20,39 +18,41 @@ $white-smoke: #f8f4f4;
   font-size: 35px;
   margin-top: 4px;
   border-top-left-radius: 5px;
-  border-top-right-radius: 5px;    
-  border: 1px solid $light-grey;  
+  border-top-right-radius: 5px;
+  border: 1px solid $light-grey;
 }
 
-// CONTENT
 .content {
-  border: 1px solid $light-grey;  
+  border: 1px solid $light-grey;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+
 .grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .collapsable {
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.6s;
-   -webkit-transition: max-height 0.6s;        
-   -moz-transition: max-height 0.6s;        
-   -o-transition: max-height 0.6s;         
-}
-.collapsable.showMe {
-  max-height: 500px;
+  -webkit-transition: max-height 0.6s;
+  -moz-transition: max-height 0.6s;
+  -o-transition: max-height 0.6s;
 }
 
-// ICON
+.collapsable.showMe {
+  max-height: 700px;
+}
+
 .up-icon {
   transition: 0.5s ease-out;
   margin-left: auto;
   height: 50px;
 }
+
 .icon {
   animation-name: icon;
   transform: rotate(180deg);

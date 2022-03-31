@@ -6,13 +6,48 @@ $dark-blue: #00386a;
 .card {
     background-color: $white-smoke;
     color: $grey;
-    padding: 25px 70px;
-    margin: 15px 20px ;
+    width: 220px;
+    height: 80px;
+    margin: 15px 20px;
     border-radius: 5px;
     border: 1px solid $light-grey;
     cursor: pointer;
-  }
-  .selected {
-      background-color: $dark-blue;
-      color: white;
-  }
+    text-align: center;
+}
+
+.card.selected {
+    background-color: $dark-blue;
+    color: white;
+}
+
+.card .title {
+    line-height: 80px;
+}
+
+.tooltip img {
+    height: 20px;
+}
+
+img.selected {
+    filter: invert(100%) saturate(0%);
+}
+
+.tooltip {
+    margin-top: 55px;
+    margin-right: 5px;
+    float: right;
+}
+
+.tooltip span {
+    visibility: hidden;
+    position: absolute;
+    background: lightblue;
+    color: $dark-blue;
+    border-radius: 6px;
+    padding: 10px;
+    z-index: 1;
+}
+
+.tooltip:hover span {
+    visibility: visible;
+}

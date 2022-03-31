@@ -21,7 +21,7 @@ export class ProductsComponent implements ControlValueAccessor {
     this.propagateChange(this.obj);
   }
 
-  getStyleForSelectedProduct(product: Product) {
+  classForSelectedProduct(product: Product) {
     return { selected: this.obj && this.obj.id === product.id }
   }
 
