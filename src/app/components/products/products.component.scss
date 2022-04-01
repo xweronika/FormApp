@@ -1,7 +1,7 @@
 .card {
     background-color: white;
     color: var(--grey);
-    width: 220px;
+    width: 250px;
     height: 80px;
     margin: 15px 20px;
     border-radius: 7px;
@@ -24,6 +24,8 @@
 .card .title {
     line-height: 80px;
     font-weight: 700;
+    font-size: 17px;
+    margin-left: 15px;
 }
 
 img {

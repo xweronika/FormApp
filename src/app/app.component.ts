@@ -9,7 +9,7 @@ import { Product } from 'src/app/interfaces/product';
 })
 export class AppComponent {
   public open: boolean = false;
-  public title: string = "Wybór produktów";
+  public title: string = "Wybór Produktów";
   public form: FormGroup;
   public products: Array<Product> =
     [{ id: 1, name: 'Produkt 1', description: 'Produkt 1 - najlepszy' },
