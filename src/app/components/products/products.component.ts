@@ -27,6 +27,7 @@ export class ProductsComponent implements ControlValueAccessor {
 
   writeValue(obj: any): void {
     if (obj) this.obj = obj;
+    // write new value from form model to view
   }
 
   registerOnChange(fn: any): void {
