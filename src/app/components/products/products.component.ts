@@ -13,7 +13,7 @@ import { Product } from 'src/app/interfaces/product';
 export class ProductsComponent implements ControlValueAccessor {
   @Input() products!: Array<Product>;
   obj: any;
-  propagateChange = (_: any) => { };
+  propagateChange: any = () => { };
   // propagate the new value 
 
   selectProduct(product: Product) {

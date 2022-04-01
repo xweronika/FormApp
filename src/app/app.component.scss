@@ -1,7 +1,3 @@
-$grey: #828185;
-$light-grey: #e4e4e4;
-$white-smoke: #f8f4f4;
-
 .container {
   margin: 20px auto;
   width: 80%;
@@ -9,23 +5,26 @@ $white-smoke: #f8f4f4;
 }
 
 .heading {
-  padding: 10px;
+  padding: 12px 30px;
   display: flex;
   cursor: pointer;
-  background: $white-smoke;
-  color: $grey;
-  font-weight: 300;
+  background-color: white;
+  box-shadow: inset 0 0 50px var(--light-grey);
+  color: var(--grey);
+  font-weight: 400;
   font-size: 35px;
   margin-top: 4px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  border: 1px solid $light-grey;
+  border: 1px solid var(--white-smoke);
+
 }
 
 .content {
-  border: 1px solid $light-grey;
+  border: 1px solid var(--white-smoke);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  box-shadow: -1px 13px 19px 0px var(--white-smoke);
 }
 
 .grid {
@@ -47,10 +46,11 @@ $white-smoke: #f8f4f4;
   max-height: 700px;
 }
 
-.up-icon {
+img {
   transition: 0.5s ease-out;
   margin-left: auto;
   height: 50px;
+  filter: invert(45%);
 }
 
 .icon {

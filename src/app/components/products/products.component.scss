@@ -1,35 +1,38 @@
-$grey: #828185;
-$light-grey: #e4e4e4;
-$white-smoke: #f8f4f4;
-$dark-blue: #00386a;
-
 .card {
-    background-color: $white-smoke;
-    color: $grey;
+    background-color: white;
+    color: var(--grey);
     width: 220px;
     height: 80px;
     margin: 15px 20px;
-    border-radius: 5px;
-    border: 1px solid $light-grey;
+    border-radius: 7px;
+    border: 1px solid var(--dark-white);
     cursor: pointer;
     text-align: center;
+    box-shadow: inset 0 0 50px var(--light-grey);
 }
 
 .card.selected {
-    background-color: $dark-blue;
+    background-color: var(--blue);
     color: white;
+    box-shadow: inset 0 0 50px var(--dark-blue);
+}
+
+.card:hover {
+    border: 1px solid var(--grey);
 }
 
 .card .title {
     line-height: 80px;
+    font-weight: 700;
 }
 
-.tooltip img {
+img {
     height: 20px;
+    filter: invert(45%);
 }
 
 img.selected {
-    filter: invert(100%) saturate(0%);
+    filter: invert(100%);
 }
 
 .tooltip {
@@ -42,7 +45,7 @@ img.selected {
     visibility: hidden;
     position: absolute;
     background: lightblue;
-    color: $dark-blue;
+    color: var(--dark-blue);
     border-radius: 6px;
     padding: 10px;
     z-index: 1;
