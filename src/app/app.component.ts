@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Subscription } from 'rxjs/internal/Subscription';
 import { Product } from 'src/app/interfaces/product';
 
 @Component({
@@ -7,10 +8,11 @@ import { Product } from 'src/app/interfaces/product';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit, OnDestroy {
   public open: boolean = false;
   public title: string = "Wybór Produktów";
   public form: FormGroup;
+  private subscription!: Subscription;
   public products: Array<Product> =
     [{ id: 1, name: 'Produkt 1', description: 'Produkt 1 - najlepszy' },
     { id: 2, name: 'Produkt 2', description: 'Produkt 2 - najlepszy' },
@@ -21,12 +23,14 @@ export class AppComponent {
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({ product: '' });
-    this.subscribeChanges();
   }
 
-  subscribeChanges() {
-    this.form.valueChanges.subscribe(
+  ngOnInit() {
+    this.subscription = this.form.valueChanges.subscribe(
       result => console.log(result.product)
     );
+  }
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }
